@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MyTestExample]">
+  <test name="SimpleTest(failed)">
+    <classes>
+      <class name="com.pronto.common.tests.HomePageTest">
+        <methods>
+          <include name="myTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.pronto.common.tests.HomePageTest -->
+    </classes>
+  </test> <!-- SimpleTest(failed) -->
+</suite> <!-- Failed suite [MyTestExample] -->

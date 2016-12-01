@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestExample">
+<!-- <parameter name="appURL" value="www.onetrust.com"/>
+<parameter name="browserType" value="chrome"/>-->
+  <test name="SimpleTest">
+    <classes>
+      <class name="com.pronto.common.tests.HomePageTest"/>
+     <!-- <class name="com.pronto.common.tests.SignInPageTest"/>
+      <class name="com.pronto.common.tests.CreateAnAccounTest"/>-->
+    </classes>
+  </test>
+</suite>
+
+

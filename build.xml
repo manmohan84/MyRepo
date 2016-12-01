@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="MyTestProject" default="" basedir=".">
+    <description>Builds, tests, and runs the project</description>
+    
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+        <classpath>
+            <pathelement location="libs/testng-6.8.5.jar"/>
+        </classpath>
+    </taskdef>
+	
+		
+  <property name="bin.home"     value="${basedir}/bin"/>
+  <property name="src.home"      value="${basedir}/src"/>
+  <property name="lib.home"      value="${basedir}/libs"/>
+ 
+
+	<echo message="lib.home is set to = ${lib.home}"/>
+ <path id="compile.classpath">
+ 
+    <fileset dir="${lib.home}">		
+      <include name="**/*.jar"/>
+    </fileset>
+	
+	 <fileset dir="${bin.home}">
+            <include name="**/*.jar" />
+		 
+        </fileset>
+		
+		<!-- log4j properties configuration 
+ 	<pathelement location="${basedir}/conf/log4j"/>-->
+   
+ </path>
+ 
+ 
+
+
+	<target name="compile"  depends="init"
+          description="Compile Java sources and copy to classes dir">
+    <javac srcdir="${src.home}" debug='true' includeantruntime="false" 
+          destdir="${bin.home}/classes"  verbose="${full-compile}">
+        <classpath refid="compile.classpath"/>
+    </javac>
+    
+  </target>
+
+  
+  <target name="dist" depends="compile"
+          description="Create WAR file for binary distribution">
+    <jar jarfile="${bin.home}/myTest.jar"
+         basedir="${bin.home}/classes"/>
+  	     
+  </target>
+
+
+  <target name="test" depends="dist" >
+      
+		<testng outputdir="${bin.home}/classes" classpathref="compile.classpath" > 
+            <xmlfileset dir="${basedir}" includes="testng.xml"/> 
+          
+        </testng>
+	   
+      
+    </target>
+	
+	
+	
+	
+	<target name="init" >
+	<delete dir="${bin.home}/classes"/>
+	<mkdir dir="${bin.home}/classes"/>
+	
+	</target>
+	
+
+
+
+ 
+
+
+</project>
