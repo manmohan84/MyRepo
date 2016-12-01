@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-MyTestExample">
-              <span class="suite-name border-failed">MyTestExample</span>
+              <span class="suite-name border-passed">MyTestExample</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-MyTestExample">
-                    <span>C:\MyTestProject\testng.xml</span>
+                    <span>C:\Users\patraman\workspace\MyTestProject\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-MyTestExample" class="hide-methods failed suite-MyTestExample"> (hide)</a> <!-- hide-methods failed suite-MyTestExample -->
-                      <a href="#" panel-name="suite-MyTestExample" class="show-methods failed suite-MyTestExample"> (show)</a> <!-- show-methods failed suite-MyTestExample -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-MyTestExample" class="hide-methods passed suite-MyTestExample"> (hide)</a> <!-- hide-methods passed suite-MyTestExample -->
+                      <a href="#" panel-name="suite-MyTestExample" class="show-methods passed suite-MyTestExample"> (show)</a> <!-- show-methods passed suite-MyTestExample -->
                     </span>
-                    <div class="method-list-content failed suite-MyTestExample">
+                    <div class="method-list-content passed suite-MyTestExample">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-MyTestExample" title="com.pronto.common.tests.HomePageTest" hash-for-method="myTest">myTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-MyTestExample -->
+                    </div> <!-- method-list-content passed suite-MyTestExample -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,9 +116,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-MyTestExample" class="panel MyTestExample">
-          <div class="suite-MyTestExample-class-failed">
+          <div class="suite-MyTestExample-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.pronto.common.tests.HomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -127,32 +127,14 @@
                   <a name="myTest">
                   </a> <!-- myTest -->
                   <span class="method-name">myTest</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=54.0.2840.99)
-  (Driver info: chromedriver=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 28 milliseconds
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8&apos;, time: &apos;2015-02-26 23:59:50&apos;
-System info: host: &apos;PATRAMAN3&apos;, ip: &apos;16.185.204.153&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_72&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.24.417431 (9aea000394714d2fbb20850021f6204f2256b9cf), userDataDir=C:\Users\patraman\AppData\Local\Temp\scoped_dir20704_29200}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: c5cc6c164d3edec80615e4e4ac809a22
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at com.pronto.common.pageobjects.HomePage.gotoCareerPage(HomePage.java:39)
-	at com.pronto.common.tests.HomePageTest.myTest(HomePageTest.java:61)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-MyTestExample-class-failed -->
+          </div> <!-- suite-MyTestExample-class-passed -->
         </div> <!-- panel MyTestExample -->
         <div panel-name="test-xml-MyTestExample" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\MyTestProject\testng.xml</span>
+            <span class="header-content">C:\Users\patraman\workspace\MyTestProject\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -205,12 +187,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'myTest')
 data.setCell(0, 2, 'com.pronto.common.tests.HomePageTest')
-data.setCell(0, 3, 23143);
+data.setCell(0, 3, 51380);
 window.suiteTableData['MyTestExample']= { tableData: data, tableDiv: 'times-div-MyTestExample'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 51 seconds</span>
               <div id="times-div-MyTestExample">
               </div> <!-- times-div-MyTestExample -->
             </div> <!-- times-div -->
@@ -242,10 +224,8 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">myTest</span>
-                <span class="method-start">11046 ms</span>
+                <span class="method-start">11392 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

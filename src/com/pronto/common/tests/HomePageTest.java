@@ -16,7 +16,6 @@ public class HomePageTest {
 	
 	private WebDriver driver;
 	public static String MainBrowserWindow;
-	//private SignInPage signInPage;
 	private HomePage homePage;
 	static String driverPath = "C:\\Users\\patraman\\workspace\\MyTestProject\\chromedriver\\";
 	
@@ -38,25 +37,13 @@ public class HomePageTest {
             driver.manage().window().maximize();
 
 	        driver.get("http://www.onetrust.com");
-	        //driver.navigate().to("www.onetrust.com");
-	        
-
+	       
 	    }
 
 		
 	 @Test(priority=0)
 	 public void myTest(){
-		 /*try {
-			Thread.sleep(20000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 Actions actions = new Actions(driver);
-			
-		 	WebElement webelement = driver.findElement(By.cssSelector("div#navigation li:nth-child(6)"));
-	       
-	        actions.moveToElement(webelement).moveToElement(driver.findElement(By.cssSelector("div#navigation li:nth-child(6) ul li:nth-child(1)"))).click().perform();*/
+		
 		 homePage= new HomePage(driver);
 		 homePage.gotoCareerPage();
 		
@@ -107,5 +94,6 @@ public class HomePageTest {
         	
         	
 	}
-
+	 
+	 
 }
